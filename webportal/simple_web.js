@@ -1,7 +1,7 @@
 
 
 var entered_url = "";
-var score = 0;
+var result = document.getElementById('result');
 var server = "http://127.0.0.1:5000/article"
 
 // thanks to Nicholas C. Zakas
@@ -65,13 +65,12 @@ function calculate_fake_news_score() {
 	console.log("FETCHING: " + get_address);
 	fetch(server)
   		.then(function(response) {
+  			console.log(response);
     		return response.json();
  	 	})
   		.then(function(myJson) {
-  			console.log(JSON.stringify(myJson));
-  			// parse JSON response from esp
-   	 		var obj = JSON.parse(myJson);
-   	 		score = parseInt(obj.score, 10);
+   	 		result.innerHTML = myJson.score
+
   		});
 
 

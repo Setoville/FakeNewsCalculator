@@ -14,7 +14,11 @@
     position: relative;
     left:270;
 }
-
+#t {
+	color: white;
+	position: relative;
+	left:250;
+}
 #result {
 	color: white;
 	position: relative;
