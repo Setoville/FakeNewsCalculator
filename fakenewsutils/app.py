@@ -5,6 +5,7 @@ from random import randint
 import base64
 import json
 import urllib.request
+import html2text
 
 app = Flask(__name__)
 CORS(app)
@@ -23,8 +24,8 @@ def parse_article(articleURL):
 
         mystring = mybytes.decode("utf-8")
         fp.close()
-
-        print (mystring)
+        h = html2text.HTML2Text()
+        print (h.handle(mystring))
 
         returnDict = {}
 
