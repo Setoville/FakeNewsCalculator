@@ -18,9 +18,11 @@ def parse_article():
         #decode base64
         decodedArticleURLfromHeader = base64.b64decode(encodedArticleURLfromHeader)
 
+
+
         print (decodedArticleURLfromHeader)
         return jsonify(
-            decodedURL=encodedArticleURLfromHeader,
+            decodedURL=decodedArticleURLfromHeader,
             success=True
         )
 
