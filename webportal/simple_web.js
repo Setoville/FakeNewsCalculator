@@ -2,8 +2,8 @@
 
 var entered_url = "";
 var result = document.getElementById('result');
-var server = "http://127.0.0.1:5000/article"
-
+var server = "http://fakenewsutil.herokuapp.com/articleID/"
+//var server = "http://127.0.0.1:5000/articleID/"
 // thanks to Nicholas C. Zakas
 // https://humanwhocodes.com/blog/2009/12/08/computer-science-in-javascript-base64-encoding/
 function base64Encode(text){
@@ -61,7 +61,7 @@ function calculate_fake_news_score() {
 	console.log("ENCODED: " + encoded_url);
 
 	// TODO: change to entered_url
-	var get_address = server+"?articleURL="+encoded_url;
+	var get_address = server+encoded_url;
 	console.log("FETCHING: " + get_address);
 	fetch(server)
   		.then(function(response) {

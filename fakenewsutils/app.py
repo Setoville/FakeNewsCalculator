@@ -1,3 +1,4 @@
+
 from flask import Flask
 from flask import request
 from flask_cors import CORS
@@ -20,7 +21,7 @@ def parse_article(articleURL):
     if articleURL is not None:
         #decode base64
         decodedArticleURLfromHeader = base64.b64decode(articleURL).decode('utf-8')
-
+        print(decodedArticleURLfromHeader)
         fp = urllib.request.urlopen(decodedArticleURLfromHeader)
         mybytes = fp.read()
 
@@ -29,7 +30,7 @@ def parse_article(articleURL):
         h = html2text.HTML2Text()
 
         sanitized_content = h.handle(mystring)
-
+        print(h.handle(mystring))
         number_of_trumps = num_instances(sanitized_content, "Trump")
 
         returnDict = {}
