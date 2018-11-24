@@ -4,7 +4,7 @@ from flask_cors import CORS
 from random import randint
 import base64
 import json
-import http.client
+import urllib.request
 
 app = Flask(__name__)
 CORS(app)
@@ -18,7 +18,13 @@ def parse_article(articleURL):
         #decode base64
         decodedArticleURLfromHeader = base64.b64decode(articleURL).decode('utf-8')
 
-        print (type(decodedArticleURLfromHeader))
+        fp = urllib.request.urlopen(decodedArticleURLfromHeader)
+        mybytes = fp.read()
+
+        mystring = mybytes.decode("utf-8")
+        fp.close()
+
+        print (mystring)
 
         returnDict = {}
 
