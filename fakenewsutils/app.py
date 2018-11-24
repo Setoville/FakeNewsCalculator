@@ -2,6 +2,8 @@ from flask import Flask
 from flask import request
 from flask_cors import CORS
 from random import randint
+
+from trump_search import num_instances
 import base64
 import json
 import urllib.request
@@ -25,11 +27,15 @@ def parse_article(articleURL):
         mystring = mybytes.decode("utf-8")
         fp.close()
         h = html2text.HTML2Text()
-        print (h.handle(mystring))
+
+        sanitized_content = h.handle(mystring)
+
+        number_of_trumps = num_instances(sanitized_content, "Trump")
 
         returnDict = {}
 
         returnDict.update({'decodedURL':decodedArticleURLfromHeader})
+        returnDict.update({'score':number_of_trumps})
 
         jsonDataAsString = json.dumps(returnDict)
 
