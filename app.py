@@ -9,6 +9,6 @@ def parse_article():
     if request.method == 'POST':
         return request.form['articleURL']
     
-@app.route('/hello',methods='[GET]')
+@app.route('/hello',methods=['GET'])
 def hello_world():
     return "hello world"
