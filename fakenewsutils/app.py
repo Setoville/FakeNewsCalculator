@@ -1,33 +1,34 @@
 from flask import Flask
 from flask import request
-from flask import jsonify
 from flask_cors import CORS
 from random import randint
 import base64
+import json
 import http.client
 
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/article',methods=['GET'])
-def parse_article():
-    
-    encodedArticleURLfromHeader = request.args.get('articleURL',default = None,type=str)
+@app.route('/articleID/<articleURL>',methods=['GET'])
+def parse_article(articleURL):
+  #  encodedArticleURLfromHeader = request.args.get('articleURL',default = None,type=str)
+    print (articleURL)
 
-    if encodedArticleURLfromHeader is not None:
+    if articleURL is not None:
         #decode base64
-        decodedArticleURLfromHeader = base64.b64decode(encodedArticleURLfromHeader)
+        decodedArticleURLfromHeader = base64.b64decode(articleURL).decode('utf-8')
 
-        print (decodedArticleURLfromHeader)
-        return jsonify(
-            decodedURL=decodedArticleURLfromHeader,
-            score='0'
-        )
+        print (type(decodedArticleURLfromHeader))
+
+        returnDict = {}
+
+        returnDict.update({'decodedURL':decodedArticleURLfromHeader})
+
+        jsonDataAsString = json.dumps(returnDict)
+
+        return jsonDataAsString
 
     
-    return jsonify(
-        score='10'
-    )
 
 @app.route('/random',methods=['GET'])
 def random():
