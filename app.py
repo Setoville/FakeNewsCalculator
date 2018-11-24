@@ -10,6 +10,7 @@ def parse_article():
         print (request.form.get("articleURL")
         return "hello world"
     
-@app.route('/hello',methods=['POST'])
+@app.route('/hello',methods=['GET'])
 def hello_world():
+    print (request.headers['articleURL'])
     return "hello world"
