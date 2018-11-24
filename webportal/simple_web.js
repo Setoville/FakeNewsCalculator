@@ -2,7 +2,7 @@
 
 var entered_url = "";
 var score = 0;
-var server = "http://127.0.0.1:5000"
+var server = "http://127.0.0.1:5000/article"
 
 // thanks to Nicholas C. Zakas
 // https://humanwhocodes.com/blog/2009/12/08/computer-science-in-javascript-base64-encoding/
@@ -61,7 +61,7 @@ function calculate_fake_news_score() {
 	console.log("ENCODED: " + encoded_url);
 
 	// TODO: change to entered_url
-	var get_address = server+"/?articleURL="+encoded_url;
+	var get_address = server+"?articleURL="+encoded_url;
 	console.log("FETCHING: " + get_address);
 	fetch(server)
   		.then(function(response) {
