@@ -1,15 +1,29 @@
+#doc {
+	background: black;
+}
+#title {
+	color:white;
+	position: relative;
+	left:250;
+}
 #calculate {
     background-color: black;
     color: white;
     width: 200;
     height: 100;
+    position: relative;
+    left:270;
 }
 
 #result {
-	color: black;
+	color: white;
+	position: relative;
+	left:295;
 }
 
 #url {
 	background: black;
     color: #FFFFFF;
+    position: relative;
+    left: 300;
 }
