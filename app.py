@@ -12,5 +12,4 @@ def parse_article():
     
 @app.route('/hello',methods=['GET'])
 def hello_world():
-    print (request.headers['articleURL'])
     return "hello world"
