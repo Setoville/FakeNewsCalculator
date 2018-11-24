@@ -8,5 +8,7 @@ app = Flask(__name__)
 def parse_article():
     if request.method == 'POST':
         return request.form['articleURL']
-    if request.method == 'GET':
-        return "hello world"
+    
+@app.route('/hello',methods='[GET]')
+def hello_world():
+    return "hello world"
