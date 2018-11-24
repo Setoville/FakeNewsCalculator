@@ -7,7 +7,7 @@ import base64
 import http.client
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/article',methods=['GET'])
 def parse_article():
@@ -17,8 +17,6 @@ def parse_article():
     if encodedArticleURLfromHeader is not None:
         #decode base64
         decodedArticleURLfromHeader = base64.b64decode(encodedArticleURLfromHeader)
-
-
 
         print (decodedArticleURLfromHeader)
         return jsonify(
