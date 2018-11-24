@@ -14,15 +14,20 @@ def parse_article():
     
     encodedArticleURLfromHeader = request.args.get('articleURL',default = None,type=str)
 
-    if articleURLfromHeader is not None:
+    if encodedArticleURLfromHeader is not None:
         #decode base64
         decodedArticleURLfromHeader = base64.b64decode(encodedArticleURLfromHeader)
 
         print (decodedArticleURLfromHeader)
-        return 0
+        return jsonify(
+            decodedURL=encodedArticleURLfromHeader,
+            success=True
+        )
 
     
-    return 1
+    return jsonify(
+        success=False
+    )
 
 @app.route('/random',methods=['GET'])
 def random():
