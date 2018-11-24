@@ -21,12 +21,12 @@ def parse_article():
         print (decodedArticleURLfromHeader)
         return jsonify(
             decodedURL=decodedArticleURLfromHeader,
-            success='true'.decode('utf-8')
+            score='0'
         )
 
     
     return jsonify(
-        success='false'.decode('utf-8')
+        score='10'
     )
 
 @app.route('/random',methods=['GET'])
