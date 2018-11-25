@@ -80,8 +80,13 @@ function calculate_fake_news_score() {
     		return response.json();
  	 	})
   		.then(function(myJson) {
-   	 		result.innerHTML = myJson.score
-            frequency.innerHTML = myJson.frequency
+            // ie. number of times it says Trump in the article
+            trump = parseInt(myJson.score);
+            // ie. based on finding similar content words from a Bing Search API call
+            frequency = parseInt(myJson.frequency);
+            overall_score = (trump+frequency)/2;
+            result.innerHTML = overall_score;
+   	 		// WORKS: result.innerHTML = myJson.score + " " + myJson.frequency
   		});
 
 
