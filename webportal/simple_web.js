@@ -2,7 +2,7 @@
 
 var entered_url = "";
 var result = document.getElementById('result');
-var server = "http://fakenewsutil.herokuapp.com/articleID/"
+var server = "https://fakenewsutil.herokuapp.com/articleID/"
 //var server = "http://127.0.0.1:5000/articleID/"
 // thanks to Nicholas C. Zakas
 // https://humanwhocodes.com/blog/2009/12/08/computer-science-in-javascript-base64-encoding/
