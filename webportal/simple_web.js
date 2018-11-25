@@ -63,7 +63,7 @@ function calculate_fake_news_score() {
 	// TODO: change to entered_url
 	var get_address = server+encoded_url;
 	console.log("FETCHING: " + get_address);
-	fetch(server)
+	fetch(get_address)
   		.then(function(response) {
   			console.log(response);
     		return response.json();

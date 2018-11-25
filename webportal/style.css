@@ -1,10 +1,17 @@
+
 #doc {
-	background: black;
+	background:black;
 }
 #title {
 	color:white;
 	position: relative;
-	left:250;
+	left:210;
+	font-size: 25px;
+}
+#logos {
+	opacity: 0.2;
+	position: absolute;
+	top:50;
 }
 #calculate {
     background-color: black;
@@ -13,21 +20,29 @@
     height: 100;
     position: relative;
     left:270;
+    border-radius: 100px;
+    font-size: 37px;
+}
+#formTitle {
+	color:white;
 }
 #t {
 	color: white;
 	position: relative;
 	left:250;
+	font-size: 20px;
 }
 #result {
 	color: white;
 	position: relative;
 	left:295;
+	font-size: 20px;
 }
 
 #url {
 	background: black;
     color: #FFFFFF;
     position: relative;
-    left: 300;
+    left: 175;
+    width:400;
 }

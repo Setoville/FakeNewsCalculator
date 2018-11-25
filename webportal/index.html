@@ -1,20 +1,30 @@
 <HTML id="doc">
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="node_modules/vis/dist/vis.js"></script> 
+  <link href="node_modules/vis/dist/vis.css" rel="stylesheet" type="text/css" />
 </head>
+
+
+<img id="logos" src="logos.jpg">
 
 <p id="title"> Fake News Calculator Web Portal </p>
 
-<form>
-  Article URL:<br>
-  <input type="text" name="url" id="url"><br>
+<form id="formTitle">
+  Enter a news article URL:<br>
+  <input type="text" name="url" id="url" value="http://www.news-article.com"><br>
 </form>
 
 
 
-<button id="calculate" onclick="calculate_fake_news_score()"> Calculate Fake News Score </button>
+<button id="calculate" onclick="calculate_fake_news_score()"> SNEWS </button>
 
-<p id="t"> Result: </p>
-<p id="result"> </p>
+<head>
+	<p id="t"> Result: </p>
+	<p id="result"> </p>
+</head>
+
+
 <script src="simple_web.js"> </script>
 </HTML>
