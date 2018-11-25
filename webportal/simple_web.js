@@ -63,12 +63,20 @@ window.addEventListener("keyup", function(event) {
   }
 });
 
+function append_http(text) {
+    if (!text.startsWith("http://") && !text.startsWith("https://")) {
+        text = "http://"+text;
+    }
+    return text;
+}
+
 function calculate_fake_news_score() {
 //austin stuff
  var elem  = document.getElementById("loadinggif");
  elem.style.display = 'inline';
 
 	entered_url = document.getElementById("url").value;
+    entered_url = append_http(entered_url);
 	console.log("ENTERED URL: " + entered_url);
 
 	var encoded_url =  base64Encode(entered_url);
