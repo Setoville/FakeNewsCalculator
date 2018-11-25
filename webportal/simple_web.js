@@ -64,6 +64,9 @@ window.addEventListener("keyup", function(event) {
 });
 
 function calculate_fake_news_score() {
+//austin stuff
+ var elem  = document.getElementById("loadinggif");
+ elem.style.display = 'inline';
 
 	entered_url = document.getElementById("url").value;
 	console.log("ENTERED URL: " + entered_url);
@@ -73,6 +76,14 @@ function calculate_fake_news_score() {
 
 	// TODO: change to entered_url
 	var get_address = server+encoded_url;
+	
+	
+	 
+	
+   
+      
+    
+	
 	console.log("FETCHING: " + get_address);
 	fetch(get_address)
   		.then(function(response) {
@@ -88,6 +99,7 @@ function calculate_fake_news_score() {
             if (overall_score > 10) {
                 overall_score = 10;
             }
+			elem.style.display = 'none';
             result.innerHTML = overall_score;
    	 		// WORKS: result.innerHTML = myJson.score + " " + myJson.frequency
   		});

@@ -13,6 +13,10 @@
 	position: absolute;
 	top:50;
 }
+#loadinggif {
+	opacity: 1.0;
+	display: none
+}
 #calculate {
     background-color: black;
     color: white;
