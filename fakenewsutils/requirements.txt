@@ -5,13 +5,6 @@ gunicorn==19.9.0
 html2text==2018.1.9
 httplib2==0.11.3
 itsdangerous==1.1.0
-reportlab==3.5.6
 requests==2.18.4
-requests-unixsocket==0.1.5
-SecretStorage==2.3.1
 simplejson==3.15.0
-system-service==0.3
-systemd-python==234
 urllib3==1.22
-usb-creator==0.3.3
-xkit==0.0.0
