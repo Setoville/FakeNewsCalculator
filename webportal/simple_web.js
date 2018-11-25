@@ -108,7 +108,7 @@ function calculate_fake_news_score() {
                 overall_score = 10;
             }
 			elem.style.display = 'none';
-            result.innerHTML = overall_score;
+            result.innerHTML = overall_score*10 + " covfefe";
    	 		// WORKS: result.innerHTML = myJson.score + " " + myJson.frequency
   		});
 

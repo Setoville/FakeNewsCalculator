@@ -2,6 +2,11 @@
 #doc {
 	background:black;
 }
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+
 #title {
 	color:white;
 	position: relative;
