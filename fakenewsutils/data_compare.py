@@ -7,8 +7,16 @@ def data_compare():
                 data = json.load(data_file)
                 tweetList = data['tweets']
 
+        parsed_tweets = []
         for tweet in tweetList:
-                print (tweet['text'])
+                newJsonObject = {
+                        "score": 100,
+                        "tweet": tweet['text']
+                }
+                parsed_tweets.append(newJsonObject)
         
+        for tweet in parsed_tweets:
+                print (tweet)
+
 
 data_compare()
