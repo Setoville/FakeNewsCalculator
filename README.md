@@ -10,5 +10,4 @@
 - Custom front-end web portal written in HTML, CSS, and Javascript.
 
 # Web Portal UI
-#![alt text](https://github.com/Setoville/FakeNewsCalculator/blob/master/images/webportal_V2.png)
 ![alt text](https://github.com/Setoville/FakeNewsCalculator/blob/master/images/demo.gif)
