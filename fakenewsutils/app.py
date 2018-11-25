@@ -3,8 +3,8 @@ from flask import Flask
 from flask import request
 from flask_cors import CORS
 from random import randint
-
 from trump_search import num_instances
+from bing_search import article_title_search
 import base64
 import json
 import urllib.request
@@ -30,14 +30,17 @@ def parse_article(articleURL):
         h = html2text.HTML2Text()
 
         sanitized_content = h.handle(mystring)
+        article_title = sanitized_content[:100]
+
         print(h.handle(mystring))
         number_of_trumps = num_instances(sanitized_content, "Trump")
+        bing_search_score = article_title_search(article_title)
 
         returnDict = {}
 
         returnDict.update({'decodedURL':decodedArticleURLfromHeader})
         returnDict.update({'score':number_of_trumps})
-
+        returnDict.update({'frequency':bing_search_score})
 
         jsonDataAsString = json.dumps(returnDict)
 

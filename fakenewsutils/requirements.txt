@@ -74,3 +74,5 @@ wadllib==1.3.3
 Werkzeug==0.14.1
 word2vec==0.10.2
 xkit==0.0.0
+googlesearch==1.0
+py-bing-search==0.2.6

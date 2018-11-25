@@ -81,7 +81,7 @@ function calculate_fake_news_score() {
  	 	})
   		.then(function(myJson) {
    	 		result.innerHTML = myJson.score
-
+            frequency.innerHTML = myJson.frequency
   		});
 
 

@@ -1,2 +1,6 @@
 *.pyc
-node_modules/
+webportal/node_modules/
+fakenewsutils/py_bing_search.py
+fakenewsutils/py_bing_search.pyc
+fakenewsutils/__pychache__
+fakenewsutils/__init__.py
