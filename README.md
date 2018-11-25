@@ -9,5 +9,5 @@
 - Flask backend with custom Python utilities.
 - Custom front-end web portal written in HTML, CSS, and Javascript.
 
-# Web Portal UI
+# Web Portal Demo (GIF)
 ![alt text](https://github.com/Setoville/FakeNewsCalculator/blob/master/images/demo.gif)
