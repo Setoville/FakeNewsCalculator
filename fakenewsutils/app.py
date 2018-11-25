@@ -38,14 +38,13 @@ def parse_article(articleURL):
         returnDict.update({'decodedURL':decodedArticleURLfromHeader})
         returnDict.update({'score':number_of_trumps})
 
+
         jsonDataAsString = json.dumps(returnDict)
 
         return jsonDataAsString
 
-    
 
 @app.route('/random',methods=['GET'])
 def random():
-    return jsonify(
-        score=randint(0,100)
-    )
+    returnDict = {'score':randint(0,100)}
+    return json.dumps(returnDict) 
