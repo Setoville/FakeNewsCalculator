@@ -3,7 +3,7 @@ from flask import Flask
 from flask import request
 from flask_cors import CORS
 from random import randint
-
+from google_search import article_title_search
 from trump_search import num_instances
 import base64
 import json
@@ -17,7 +17,7 @@ CORS(app)
 def parse_article(articleURL):
   #  encodedArticleURLfromHeader = request.args.get('articleURL',default = None,type=str)
     print (articleURL)
-
+    print(article_title_search('Test Title'))
     if articleURL is not None:
         #decode base64
         decodedArticleURLfromHeader = base64.b64decode(articleURL).decode('utf-8')
