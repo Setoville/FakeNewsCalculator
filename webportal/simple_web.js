@@ -52,6 +52,17 @@ function base64Encode(text){
     return result.join("");
 }
 
+// Execute a function when the user releases a key on the keyboard
+window.addEventListener("keyup", function(event) {
+  // Cancel the default action, if needed
+  event.preventDefault();
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Trigger the button element with a click
+    calculate_fake_news_score()
+  }
+});
+
 function calculate_fake_news_score() {
 
 	entered_url = document.getElementById("url").value;
@@ -63,7 +74,7 @@ function calculate_fake_news_score() {
 	// TODO: change to entered_url
 	var get_address = server+encoded_url;
 	console.log("FETCHING: " + get_address);
-	fetch(server)
+	fetch(get_address)
   		.then(function(response) {
   			console.log(response);
     		return response.json();
