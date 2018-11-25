@@ -6,6 +6,7 @@
 	color:white;
 	position: relative;
 	font-size: 25px;
+	font-family: "Comic Sans MS";
 }
 #logos {
 	opacity: 0.2;
@@ -20,6 +21,7 @@
     position: relative;
     border-radius: 100px;
     font-size: 37px;
+    font-family: "Comic Sans MS";
 }
 #formTitle {
 	color:white;
@@ -28,16 +30,21 @@
 	color: white;
 	position: relative;
 	font-size: 40px;
+	font-family: "Comic Sans MS";
 }
 #result {
 	color: white;
 	position: relative;
 	font-size: 100px;
+	font-family: "Comic Sans MS";
 }
 
 #url {
 	background: black;
     color: #FFFFFF;
     position: relative;
+    font-size: 20px;
+    font-family: "Comic Sans MS";
     width:400;
+    height:50;
 }
