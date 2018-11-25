@@ -1,5 +1,6 @@
 # FakeNewsCalculator
 - Calculates a fake-ness score given a URL to a news article.
+- Project completed during the HackWestern hackathon at Western University in November 2018
 
 # Dependencies
 - html2text, json, requests, re, flask (see requirements.txt)
