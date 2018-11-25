@@ -40,7 +40,6 @@ def handle_bing_response(response, title):
 
     return score
 
-# API KEYS: (1) 8b7bd7038e824cb08e38fca1dc911442 (2) 22a7de0a131844cca5b0afe8f242f751
 # lets search for the given article's title on Bing and find articles of similar title
 def article_title_search(title):
 
