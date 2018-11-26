@@ -43,7 +43,9 @@ def handle_bing_response(response, title):
 # lets search for the given article's title on Bing and find articles of similar title
 def article_title_search(title):
 
-    subscription_key = "8b7bd7038e824cb08e38fca1dc911442"
+    # enter api key here
+    subscription_key = ""
+
     assert subscription_key
     search_url = "https://api.cognitive.microsoft.com/bing/v7.0/search"
     search_term = title
