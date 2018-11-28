@@ -126,9 +126,10 @@ function open_help_menu() {
     help_window_content = help_window_content + " <p> </p> <p> Sincerely, The Snews Button team.</p></center></body> </font> </html>"
     var myWindow = window.open("", "HelpWindow", "width=500,height=500");
     myWindow.document.write(help_window_content);
+    myWindow.document.title = "Help Menu";
 
 }
 window.onload = function() {
-
+    window.document.title = "The Snews Button";
 }
 
