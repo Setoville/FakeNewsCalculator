@@ -118,9 +118,9 @@ function calculate_fake_news_score() {
 }
 
 function open_help_menu() {
-    var help_window_content = " <html> <font color=white font face=Comic Sans size=5> <body bgcolor=black> <center> <h> Instructions: </h> ";
+    var help_window_content = " <html> <font color=white face=\"Comic Sans MS\" size=5> <body bgcolor=black> <center> <h> Instructions: </h> ";
     help_window_content = help_window_content+"<p></p><p> Enter a URL to a news article, then hit the SNEWS? button. </p>";
-    help_window_content = help_window_content+"<p> The article will be rated in 'covfefe' units. </p>"; 
+    help_window_content = help_window_content+"<p> The article will be rated in 'covfefe' units (from 0 to 100). </p>"; 
     help_window_content = help_window_content + "<p> </p> <p> The more covfefe an article is, the more fake it is. </p> ";
     help_window_content = help_window_content + "<p> </p> <p> </p> <p> PS: Please don't take this too seriously :)</p>"
     help_window_content = help_window_content + " <p> </p> <p> Sincerely, The Snews Button team.</p></center></body> </font> </html>"
