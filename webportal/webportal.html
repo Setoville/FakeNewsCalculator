@@ -1,18 +1,6 @@
 <HTML id="doc">
 <head>
-
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script>
-		(adsbygoogle = window.adsbygoogle || []).push({
-		google_ad_client: "ca-pub-2048299675406511",
-		enable_page_level_ads: true
-	});
-	</script>
-
   <link rel="stylesheet" type="text/css" href="style.css">
-
-  <script src="node_modules/vis/dist/vis.js"></script> 
-  <link href="node_modules/vis/dist/vis.css" rel="stylesheet" type="text/css" />
 </head>
 
 
@@ -25,14 +13,14 @@
   
  
 
-<form id="formTitle"> <br>
+<form id="formTitle" onSubmit="return false;"> <br>
   <center>
   	<input type="text" name="url" id="url" value="https://www.news-article.com"><br>
 
-  	<button class="btn" style="float:right" align="right" id="help" onclick="open_help_menu()">?</button>
   </center>
 </form>
 
+  	<button class="btn" style="float:right" align="right" id="help" onclick="open_help_menu()">?</button>
 <center>
 	<button id="calculate" onclick="calculate_fake_news_score()"> SNEWS? </button>
 

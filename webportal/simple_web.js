@@ -52,17 +52,6 @@ function base64Encode(text){
     return result.join("");
 }
 
-// Execute a function when the user releases a key on the keyboard
-window.addEventListener("keyup", function(event) {
-  // Cancel the default action, if needed
-  event.preventDefault();
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode === 13) {
-    // Trigger the button element with a click
-    calculate_fake_news_score()
-  }
-});
-
 function append_http(text) {
     if (!text.startsWith("http://") && !text.startsWith("https://")) {
         text = "http://"+text;
@@ -71,26 +60,23 @@ function append_http(text) {
 }
 
 function calculate_fake_news_score() {
-//austin stuff
- var elem  = document.getElementById("loadinggif");
- elem.style.display = 'inline';
 
-	entered_url = document.getElementById("url").value;
+    entered_url = document.getElementById("url").value;
+    if (entered_url == "https://www.news-article.com") {
+        return;
+    }
+
+    var elem  = document.getElementById("loadinggif");
+    elem.style.display = 'inline';
+
+	
     entered_url = append_http(entered_url);
 	console.log("ENTERED URL: " + entered_url);
 
 	var encoded_url =  base64Encode(entered_url);
 	console.log("ENCODED: " + encoded_url);
 
-	// TODO: change to entered_url
 	var get_address = server+encoded_url;
-	
-	
-	 
-	
-   
-      
-    
 	
 	console.log("FETCHING: " + get_address);
 	fetch(get_address)
@@ -127,9 +113,15 @@ function open_help_menu() {
     var myWindow = window.open("", "HelpWindow", "width=500,height=500");
     myWindow.document.write(help_window_content);
     myWindow.document.title = "Help Menu";
-
 }
+window.addEventListener('keypress',function(e){
+        if (e.keyCode === 13) {
+            calculate_fake_news_score();
+            
+        }
+});
 window.onload = function() {
     window.document.title = "The Snews Button";
+
 }
 
