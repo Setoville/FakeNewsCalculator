@@ -3,7 +3,7 @@ Flask-API==1.0
 Flask-Cors==3.0.7
 gunicorn==19.9.0
 html2text==2018.1.9
-httplib2==0.11.3
+httplib2==0.18.0
 itsdangerous==1.1.0
 keyring==15.1.0
 keyrings.alt==3.1
